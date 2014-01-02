@@ -58,3 +58,11 @@
   # cloned-repos
   up = !"git remote update; git merge upstream/master"
   pu = !"git push upstream master; git push origin"
+
+[user]
+  name = Fabrice Bellingard
+  email = fabrice.bellingard@sonarsource.com
+
+[github]
+  user = bellingard
+  token = $GITHUB_TOKEN
