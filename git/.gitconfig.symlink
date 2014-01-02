@@ -1,0 +1,60 @@
+# Set your user tokens as environment variables
+
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  safecrlf = true
+
+[commit]
+  template = ~/.git-commit-template
+
+[push]
+  # 'git push' will push the current branch to its tracking branch
+  # the usual default is to push all branches
+  default = tracking
+
+[branch]
+  autosetuprebase = always
+
+[branch "master"]
+  rebase = true
+
+[color]
+  ui = true
+
+[diff]
+  # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
+  # instead of a/b/c/d as prefixes for patches
+  mnemonicprefix = true
+
+  # Detect renames and copies
+  renames = copies
+
+  # Better detection of words
+  wordRegex = .
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+
+  ls-ignored = ls-files --exclude-standard --ignored --others
+
+  amend = !git commit --amend --reuse-message=HEAD --date=\"$(date -R)\"
+
+  # diff
+  dc = diff --cached
+  wd = diff --word-diff=color
+  wdc = diff --word-diff=color --staged
+
+  # log
+  l = log --oneline
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  changes = log --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative --name-status
+ 
+  # reset
+  unstage = reset HEAD
+
+  # cloned-repos
+  up = !"git remote update; git merge upstream/master"
+  pu = !"git push upstream master; git push origin"

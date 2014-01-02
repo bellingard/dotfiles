@@ -1,0 +1,29 @@
+### Each directory and file, which starts with dot
+.*
+
+### IntelliJ Idea
+#.idea/
+*.iml
+*.ipr
+*.iws
+
+### Eclipse
+#.settings/
+#.classpath
+#.project
+
+### Maven
+target/
+
+### Gradle
+#.gradle/
+
+### Subversion
+#.svn/
+
+## Compiled classes
+*.class
+
+### Windows
+Thumbs.db
+Desktop.ini
