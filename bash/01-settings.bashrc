@@ -20,7 +20,7 @@ IGNOREEOF=1
 # Aliases specific to GitHub repositories and associated tests
 # ================================
 
-export SOFTWARE_FOLDER=$SOFTWARE_FOLDER
+export SOFTWARE_FOLDER=/Software
 export REPOS=$HOME/Repos
 export TESTS=$HOME/Tests
 
@@ -40,7 +40,7 @@ export ANDROID_HOME=$SOFTWARE_FOLDER/Android/current/sdk
 export V8_HOME=$SOFTWARE_FOLDER/V8/current
 export SUBVERSION_BIN=/opt/subversion/bin
 
-export PATH=$HOME/Scripts:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:/usr/local/git/bin/:$PATH
+export PATH=$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:/usr/local/git/bin/:$PATH
 
 
 export PENV="-Dsonar.jdbc.url=jdbc:postgresql://localhost:15432/sonar -Dsonar.jdbc.driverClassName=org.postgresql.Driver -Dsonar.host.url=http://localhost:9000"
