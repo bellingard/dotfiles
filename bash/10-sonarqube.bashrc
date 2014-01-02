@@ -11,8 +11,8 @@ export TESTS_BACKUP=$TESTS/BACKUP
 export SONAR_TESTS=$HOME/SONAR
 export SONAR_TESTS_BACKUP=$SONAR_TESTS/BACKUP
 
+export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
 export PLUGINS_PROD=$SOFTWARE_FOLDER/Sonar/current/extensions/plugins
-export PLUGINS_DEV=$HOME/SONAR/sonar-current/extensions/plugins
 
 export MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
 export M2_HOME=$SOFTWARE_FOLDER/Maven/current
