@@ -1,1 +1,5 @@
+# Don't ignore this "." file
 !.*
+
+# And ignore this private bash script that's used to set some private information like $GITHUB_TOKEN
+bash/00-private-settings.bashrc
