@@ -3,9 +3,7 @@
 # ================================
 # General aliases
 # ================================
-alias ls='ls -G'
 alias ll="ls -al"
-
 alias grep='grep --colour=auto'
 
 
