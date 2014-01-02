@@ -7,8 +7,10 @@
 export SOFTWARE_FOLDER=/Software
 export REPOS=$HOME/Repos
 export TESTS=$HOME/Tests
-
 export TESTS_BACKUP=$TESTS/BACKUP
+export SONAR_TESTS=$HOME/SONAR
+export SONAR_TESTS_BACKUP=$SONAR_TESTS/BACKUP
+
 export PLUGINS_PROD=$SOFTWARE_FOLDER/Sonar/current/extensions/plugins
 export PLUGINS_DEV=$HOME/SONAR/sonar-current/extensions/plugins
 
@@ -26,6 +28,7 @@ export SUBVERSION_BIN=/opt/subversion/bin
 
 export PATH=$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
 
+export PATH=$DOTFILES/bin-sonar-dev:$PATH
 
 export PENV="-Dsonar.jdbc.url=jdbc:postgresql://localhost:15432/sonar -Dsonar.jdbc.driverClassName=org.postgresql.Driver -Dsonar.host.url=http://localhost:9000"
 export MENV="-Dsonar.jdbc.url=jdbc:mysql://localhost:13306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8 -Dsonar.jdbc.driverClassName=com.mysql.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
