@@ -1,0 +1,3 @@
+# The following environment variables must be set in a bashrc file for all the SonarQube scripts to work:
+export GITHUB_TOKEN=
+export SONARSOURCE_PLUGIN_LICENSES_URL=
