@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /usr/local/git/contrib/completion/git-completion.bash
+source $GIT_COMPLETION_PATH
 
 function __dotfiles_workdir() {
   local g="$(git rev-parse --git-dir 2>/dev/null)"
