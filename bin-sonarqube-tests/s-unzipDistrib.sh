@@ -1,6 +1,6 @@
 #!/bin/sh
 sonarVersion=`ls $REPOS/sonar/sonar-application/target/sonarqube-*-SNAPSHOT.zip | sed 's/.*target\/sonarqube-\(.*\)-SNAPSHOT\.zip/\1/' `
-Echo "Extracting SonarQube $sonarVersion"
+echo "Extracting SonarQube $sonarVersion"
 
 rm -rf $SONAR_TESTS/INSTALL/*
 unzip -q $REPOS/sonar/sonar-application/target/sonarqube-$sonarVersion-SNAPSHOT.zip -d $SONAR_TESTS/INSTALL
