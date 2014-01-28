@@ -4,7 +4,6 @@
 # Settings specific to tests of SonarQube
 # ================================
 
-export SOFTWARE_FOLDER=/Software
 export REPOS=$HOME/Repos
 export TESTS=$HOME/Tests
 export TESTS_BACKUP=$TESTS/BACKUP
