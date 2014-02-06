@@ -25,7 +25,7 @@ then
     else
       if [ "$2" = "O" ] 
       then
-        echo "sonar.jdbc.url=jdbc:oracle:thin:@$SONAR_DB/XE" >> $SONAR_PROPERTIES_FILE
+        echo "sonar.jdbc.url=jdbc:oracle:thin:@$SONAR_DB:11521/ORCL" >> $SONAR_PROPERTIES_FILE
       else
         echo "sonar.jdbc.url=jdbc:h2:tcp://$SONAR_DB:9092/sonar" >> $SONAR_PROPERTIES_FILE
       fi
