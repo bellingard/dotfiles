@@ -4,9 +4,15 @@ DEPLOY_FOLDER=$PLUGINS_DEV
 
 echo "Building SonarQube $1"
 
-cd $REPOS/sonar-$PLUGIN
-git pull
-mvn clean install -DskipTests
+if [ "$2" = "-o" ]
+then
+  echo "(no build required)"
+else
+  cd $REPOS/sonar-$PLUGIN
+  git pull
+  mvn clean install -DskipTests
+fi
+echo ""
 
 installPluginInDeployFolder() {
   if [ "$2" = "" ]
