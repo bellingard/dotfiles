@@ -34,7 +34,7 @@ echo ""
 # Checks if plugins must be installed or not
 for var in "$@"
 do
-	if [ "$var" != "-o" ]
+	if [ "$var" != "-o" ] && [ "$var" != "P" ] && [ "$var" != "M" ] && [ "$var" != "O" ]
 	then
 		echo "================================================="
 		s-installLatestVersionOfPlugin.sh $var $PLUGIN_BUILD_OPTION
