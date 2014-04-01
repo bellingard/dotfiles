@@ -27,7 +27,12 @@ then
       then
         echo "sonar.jdbc.url=jdbc:oracle:thin:@$SONAR_DB:11521/ORCL" >> $SONAR_PROPERTIES_FILE
       else
-        echo "sonar.jdbc.url=jdbc:h2:tcp://$SONAR_DB:9092/sonar" >> $SONAR_PROPERTIES_FILE
+        if [ "$2" = "MS" ] 
+        then
+          echo "sonar.jdbc.url=jdbc:jtds:sqlserver://$SONAR_DB/sonar;SelectMethod=Cursor" >> $SONAR_PROPERTIES_FILE
+        else
+          echo "sonar.jdbc.url=jdbc:h2:tcp://$SONAR_DB:9092/sonar" >> $SONAR_PROPERTIES_FILE
+        fi
       fi
     fi
   fi
