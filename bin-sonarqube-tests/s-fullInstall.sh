@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Exit on failure
+set -e
+
 echo "Full install of SonarQube and plugins"
 
 # Check if build is required for plugins and if specific DB is specified for the startup
