@@ -10,6 +10,7 @@ alias dsstore-clean='find . -type f -name .DS_Store -delete'
 
 # Git completion
 export GIT_COMPLETION_PATH=/usr/local/git/contrib/completion/git-completion.bash
+export GIT_PROMPT_PATH=/usr/local/git/contrib/completion/git-prompt.bash
 
 # JAVA_HOME folder
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home
