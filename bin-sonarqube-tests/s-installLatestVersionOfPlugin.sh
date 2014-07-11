@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Exit on failure
+set -e
+
 PLUGIN=$1
 DEPLOY_FOLDER=$PLUGINS_DEV
 
