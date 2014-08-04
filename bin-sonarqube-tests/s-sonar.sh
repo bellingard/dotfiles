@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Exit on failure
+set -e
+
 SONAR_PROPERTIES_FILE=$SONAR_TESTS/sonar-current/conf/sonar.properties
 
 if [ -z "$3" ]
@@ -11,8 +14,8 @@ fi
 
 if [ "$1" = "start" ]
 then 
-  # delete the E/S cache as we might start on a different DB
-  rm -rf $SONAR_TESTS/sonar-current/data/es
+  # clean the temp data
+  s-clearDataFolder.sh
 
   # print out properties for the correct DB
   if [ "$2" = "P" ] 
@@ -25,6 +28,14 @@ then
     else
       if [ "$2" = "O" ] 
       then
+        # copy the driver if it does not exist
+        ORACLE_DRIVER="$SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/ojdbc6-11.2.0.3.0.jar"
+        if [ ! -f "$ORACLE_DRIVER" ]
+        then
+          echo "Copying ORACLE driver"
+          cp $SOFTWARE_FOLDER/Sonar/ojdbc6-11.2.0.3.0.jar $SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/
+        fi
+
         echo "sonar.jdbc.url=jdbc:oracle:thin:@$SONAR_DB:11521/ORCL" >> $SONAR_PROPERTIES_FILE
       else
         if [ "$2" = "MS" ] 
