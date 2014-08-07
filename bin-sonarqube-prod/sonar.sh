@@ -21,7 +21,7 @@ then
   else
     if [ "$2" = "M" ] 
     then
-      echo "sonar.jdbc.url=jdbc:mysql://$SONAR_DB:13306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true" >> $SONAR_PROPERTIES_FILE
+      echo "sonar.jdbc.url=jdbc:mysql://$SONAR_DB:13306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance" >> $SONAR_PROPERTIES_FILE
     else
       if [ "$2" = "O" ] 
       then
