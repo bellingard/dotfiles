@@ -18,7 +18,7 @@ export MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
 export M2_HOME=$SOFTWARE_FOLDER/Maven/current
 export MAVEN_LOCAL_REPOSITORY=$HOME/.m2/repository
 export MAVEN_HOME=M2_HOME
-export ANT_HOME=$SOFTWARE_FOLDER/Ant/apache-ant-1.8.0
+export ANT_HOME=$SOFTWARE_FOLDER/Ant/current
 export SONAR_RUNNER_HOME=$SOFTWARE_FOLDER/SonarRunner/current
 export GRADLE_HOME=$SOFTWARE_FOLDER/Gradle/current
 export GRADLE_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
@@ -26,7 +26,7 @@ export ANDROID_HOME=$SOFTWARE_FOLDER/Android/current/sdk
 export V8_HOME=$SOFTWARE_FOLDER/V8/current
 export SUBVERSION_BIN=/opt/subversion/bin
 
-export PATH=$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
+export PATH=$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
 
 export PATH=$DOTFILES/bin-sonarqube-prod:$DOTFILES/bin-sonarqube-tests:$PATH
 
