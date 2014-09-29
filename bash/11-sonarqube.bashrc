@@ -27,6 +27,8 @@ export V8_HOME=$SOFTWARE_FOLDER/V8/current
 export SUBVERSION_BIN=/opt/subversion/bin
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
+export MAVEN_OPTS='-server'
+export SONAR_RUNNER_OPTS='-server'
 
 # Add tools to the PATH
 export PATH=$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
