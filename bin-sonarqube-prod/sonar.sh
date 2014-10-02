@@ -13,6 +13,7 @@ if [ "$1" = "start" ]
 then 
   # delete the E/S cache as we might start on a different DB
   rm -rf $SOFTWARE_FOLDER/Sonar/current/data/es
+  echo "" >> $SONAR_PROPERTIES_FILE
 
   # print out properties for the correct DB
   if [ "$2" = "P" ] 
