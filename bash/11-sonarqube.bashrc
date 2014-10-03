@@ -8,7 +8,8 @@ export REPOS=$HOME/Repos
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
 export TESTS_BACKUP=$TESTS/BACKUP
-export SONAR_TESTS=$HOME/SONAR
+
+export SONAR_TESTS=$SOFTWARE_FOLDER/Sonar/DEV_VERSION
 export SONAR_TESTS_BACKUP=$SONAR_TESTS/BACKUP
 
 export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
