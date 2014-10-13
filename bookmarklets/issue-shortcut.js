@@ -1,0 +1,1 @@
+javascript:key('shift+a', function(){ $j('#issue-assign').click(); return false;});
