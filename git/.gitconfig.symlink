@@ -4,6 +4,7 @@
   excludesfile = ~/.gitignore
   autocrlf = input
   safecrlf = true
+  editor = vim
 
 [commit]
   template = ~/.git-commit-template
@@ -62,5 +63,19 @@
 [github]
   user = bellingard
   token = $GITHUB_TOKEN
+
+# commands will be autocorrect (rset -> reset)
 [help]
 	autocorrect = -1
+
+# remember previous conflict resolutions
+[rerere]
+  enabled = true
+
+# autostash will stash a dirty tree, rebase, then unstash
+[rebase]
+  autostash = true
+
+# status will see inside untracked directories
+[status]
+  showUntrackedFiles = all
