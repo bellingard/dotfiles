@@ -42,3 +42,6 @@ export MENV="-Dsonar.jdbc.url=jdbc:mysql://localhost:13306/sonar?autoReconnect=t
 export OENV="-Dsonar.jdbc.url=jdbc:oracle:thin:@localhost:11521/ORCL -Dsonar.jdbc.driverClassName=oracle.jdbc.OracleDriver -Dsonar.host.url=http://localhost:9000"
 export HENV="-Dsonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar -Dsonar.jdbc.driverClassName=org.h2.Driver -Dsonar.host.url=http://localhost:9000"
 export MSENV="-Dsonar.jdbc.url=jdbc:jtds:sqlserver://localhost/sonar;SelectMethod=Cursor -Dsonar.jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
+
+# For Dory VM
+export NO_SONARQUBE=1
