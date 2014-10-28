@@ -14,6 +14,7 @@ alias repos="cd $REPOS"
 alias examples="cd $REPOS/sonar-examples"
 alias java-projects="cd $TESTS/Java/projects"
 alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
+alias sonar-dev-folder="cd $SONAR_TESTS/sonar-current"
 
 # ================================
 # Aliases to our test VMs
