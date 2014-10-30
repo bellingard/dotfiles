@@ -9,6 +9,10 @@ echo "Distribution unzipped"
 
 rm $SONAR_TESTS/sonar-current
 ln -s $SONAR_TESTS/INSTALL/sonarqube-$sonarVersion-SNAPSHOT $SONAR_TESTS/sonar-current
-echo "" >> $SONAR_TESTS/sonar-current/conf/sonar.properties
-echo "sonar.updatecenter.url=http://update.sonarsource.org/update-center-dev.properties" >> $SONAR_TESTS/sonar-current/conf/sonar.properties
+
+# Configure Dev UPC
+echo "\n\nsonar.updatecenter.url=http://update.sonarsource.org/update-center-dev.properties" >> $SONAR_TESTS/sonar-current/conf/sonar.properties
+# Enable E/S HTTP port
+echo "\nsonar.search.httpPort=9010" >> $SONAR_TESTS/sonar-current/conf/sonar.properties
+
 echo "Distribution installed"
