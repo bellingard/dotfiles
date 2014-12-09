@@ -26,22 +26,30 @@ export GRADLE_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
 export ANDROID_HOME=$SOFTWARE_FOLDER/Android/current/sdk
 export V8_HOME=$SOFTWARE_FOLDER/V8/current
 export SUBVERSION_BIN=/opt/subversion/bin
+export GROOVY_HOME=$SOFTWARE_FOLDER/Groovy/current
 
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 export MAVEN_OPTS='-server'
 export SONAR_RUNNER_OPTS='-server'
 
 # Add tools to the PATH
-export PATH=$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
+export PATH=$GROOVY_HOME/bin:$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
 # Add dotfiles folders
 export PATH=$DOTFILES/bin-sonarqube-prod:$DOTFILES/bin-sonarqube-tests:$PATH
 
 # Add env URLs for SQ
-export PENV="-Dsonar.jdbc.url=jdbc:postgresql://localhost:15432/sonar -Dsonar.jdbc.driverClassName=org.postgresql.Driver -Dsonar.host.url=http://localhost:9000"
-export MENV="-Dsonar.jdbc.url=jdbc:mysql://localhost:13306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance -Dsonar.jdbc.driverClassName=com.mysql.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
-export OENV="-Dsonar.jdbc.url=jdbc:oracle:thin:@localhost:11521/ORCL -Dsonar.jdbc.driverClassName=oracle.jdbc.OracleDriver -Dsonar.host.url=http://localhost:9000"
-export HENV="-Dsonar.jdbc.url=jdbc:h2:tcp://localhost:9092/sonar -Dsonar.jdbc.driverClassName=org.h2.Driver -Dsonar.host.url=http://localhost:9000"
-export MSENV="-Dsonar.jdbc.url=jdbc:jtds:sqlserver://localhost/sonar;SelectMethod=Cursor -Dsonar.jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
+export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
+export M_JDBC_URL="jdbc:mysql://localhost:13306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
+export O_JDBC_URL="jdbc:oracle:thin:@localhost:11521/ORCL"
+export H_JDBC_URL="jdbc:h2:tcp://localhost:9092/sonar"
+export MS_JDBC_URL="jdbc:jtds:sqlserver://localhost/sonar;SelectMethod=Cursor"
+
+# Add env URLs for SQ
+export PENV="-Dsonar.jdbc.url=$P_JDBC_URL -Dsonar.jdbc.driverClassName=org.postgresql.Driver -Dsonar.host.url=http://localhost:9000"
+export MENV="-Dsonar.jdbc.url=$M_JDBC_URL -Dsonar.jdbc.driverClassName=com.mysql.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
+export OENV="-Dsonar.jdbc.url=$O_JDBC_URL -Dsonar.jdbc.driverClassName=oracle.jdbc.OracleDriver -Dsonar.host.url=http://localhost:9000"
+export HENV="-Dsonar.jdbc.url=$H_JDBC_URL -Dsonar.jdbc.driverClassName=org.h2.Driver -Dsonar.host.url=http://localhost:9000"
+export MSENV="-Dsonar.jdbc.url=$MS_JDBC_URL -Dsonar.jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
 
 # For Dory VM
 export NO_SONARQUBE=1
