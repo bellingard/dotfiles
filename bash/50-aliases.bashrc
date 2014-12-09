@@ -22,7 +22,7 @@ alias sonar-dev-folder="cd $SONAR_TESTS/sonar-current"
 # ================================
 alias dory-vm="cd $VMS_REPO/instances/dory-latest"
 alias nemo-vm="cd $VMS_REPO/instances/nemodb-latest"
-alias mysql-vm="cd $VMS_REPO/instances/mysql-5.7"
+alias mysql-vm="cd $VMS_REPO/instances/mysql-5.6"
 alias pg-vm="cd $VMS_REPO/instances/postgresql-9.3"
 alias oracle-vm="cd $VMS_REPO/instances/oracle-11g"
 alias mssql-vm="cd $VMS_REPO/instances/mssql2008"
