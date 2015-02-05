@@ -50,3 +50,9 @@ done
 echo "================================================="
 s-sonar.sh start $DB_FOR_STARTUP
 echo ""
+
+if [[ "$OSTYPE" =~ ^darwin ]]
+then
+	# notification on OSX
+	osascript -e 'display notification "SonarQube starting..." with title "SonarQube"'
+fi
