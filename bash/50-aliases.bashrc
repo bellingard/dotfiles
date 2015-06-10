@@ -1,14 +1,6 @@
 #!/bin/bash
 
 # ================================
-# General aliases
-# ================================
-alias ll="ls -al"
-alias grep='grep --colour=auto'
-alias h="history"
-
-
-# ================================
 # Aliases specific to GitHub repositories and associated tests
 # ================================
 alias repos="cd $REPOS"

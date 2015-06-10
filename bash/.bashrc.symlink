@@ -17,10 +17,11 @@ fi
 [[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
 
 
+# ================================
 # Dotfiles
-# TODO get rid of hard-coded path
+# ================================
+
 export DOTFILES=$HOME/Repos/dotfiles
-PATH="$DOTFILES/bin:$HOME/bin:$PATH"
 
 for config_file in $DOTFILES/**/*.bashrc
 do

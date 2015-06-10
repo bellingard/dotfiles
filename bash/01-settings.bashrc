@@ -16,4 +16,17 @@ HISTFILESIZE=3000
 IGNOREEOF=1
 
 # Enhance PATH to make sure that /usr/local/bin is used before /usr/bin
-export PATH=/usr/local/bin:$PATH
+export PATH=$DOTFILES/bin:$HOME/bin:/usr/local/bin:$PATH
+
+# ================================
+# General aliases
+# ================================
+alias ll="ls -al"
+alias grep='grep --colour=auto'
+alias h="history"
+
+# ================================
+# Git repositories location
+# ================================
+export REPOS=$HOME/Repos
+alias repos="cd $REPOS"

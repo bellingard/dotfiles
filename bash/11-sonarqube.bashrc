@@ -4,7 +4,7 @@
 # Settings specific to tests of SonarQube
 # ================================
 
-export REPOS=$HOME/Repos
+
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
 export TESTS_BACKUP=$TESTS/BACKUP
