@@ -27,7 +27,7 @@ then
         if [ ! -f "$ORACLE_DRIVER" ]
         then
           echo "Copying ORACLE driver"
-          cp $SOFTWARE_FOLDER/Sonar/ojdbc6-11.2.0.3.0.jar $SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/
+          cp $SOFTWARE_FOLDER/SonarQube/ojdbc6-11.2.0.3.0.jar $SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/
         fi
 
         echo "sonar.jdbc.url=$O_JDBC_URL" >> $SONAR_PROPERTIES_FILE

@@ -4,13 +4,12 @@
 # Settings specific to tests of SonarQube
 # ================================
 
-
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
 
 
-export SONAR_TESTS=$SOFTWARE_FOLDER/Sonar/DEV_VERSION
-export SONAR_TESTS_BACKUP=$SONAR_TESTS/BACKUP
+export SONAR_TESTS=$SOFTWARE_FOLDER/SonarQube/DEV_VERSION
+
 
 export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
 
@@ -37,3 +36,27 @@ export MSENV="-Dsonar.jdbc.url=$MS_JDBC_URL -Dsonar.jdbc.driverClassName=net.sou
 
 # For Dory VM
 export NO_SONARQUBE=1
+
+
+# ================================
+# Aliases specific to GitHub repositories and associated tests
+# ================================
+alias repos="cd $REPOS"
+alias examples="cd $REPOS/sonar-examples"
+alias java-projects="cd $TESTS/Java/projects"
+alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
+alias sonar-dev-folder="cd $SONAR_TESTS/sonar-current"
+
+# ================================
+# Aliases to our test VMs
+# ================================
+alias dory-vm="cd $VMS_REPO/instances/dory-latest"
+alias nemo-vm="cd $VMS_REPO/instances/nemodb-latest"
+alias mysql-vm="cd $VMS_REPO/instances/mysql-5.6"
+alias pg-vm="cd $VMS_REPO/instances/postgresql-9.3"
+alias oracle-vm="cd $VMS_REPO/instances/oracle-11g"
+alias mssql-vm="cd $VMS_REPO/instances/mssql2012"
+alias ie9-vm="cd $VMS_REPO/instances/ie9-win7"
+alias ie10-vm="cd $VMS_REPO/instances/ie10-win7"
+alias ie11-vm="cd $VMS_REPO/instances/ie11-win7"
+
