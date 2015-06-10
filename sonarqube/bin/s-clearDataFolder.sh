@@ -1,3 +1,3 @@
 #!/bin/sh
-rm -rf $SONAR_TESTS/sonar-current/data/*
-rm -rf $SONAR_TESTS/sonar-current/logs/*
+rm -rf $SONAR_NEXT/data/*
+rm -rf $SONAR_NEXT/logs/*

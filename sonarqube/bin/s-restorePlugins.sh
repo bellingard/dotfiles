@@ -1,2 +1,2 @@
 #!/bin/sh
-cp $SONAR_TESTS/BACKUP/*.jar $SONAR_TESTS/sonar-current/extensions/plugins/
+cp $SONAR_NEXT_FILES/BACKUP/*.jar $SONAR_NEXT/extensions/plugins/

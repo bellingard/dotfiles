@@ -3,7 +3,7 @@
 # Exit on failure
 set -e
 
-SONAR_PROPERTIES_FILE=$SONAR_TESTS/sonar-current/conf/sonar.properties
+SONAR_PROPERTIES_FILE=$SONAR_NEXT/conf/sonar.properties
 SONAR_DB="localhost"
 
 if [ "$1" = "start" ]
@@ -23,11 +23,11 @@ then
       if [ "$2" = "O" ] 
       then
         # copy the driver if it does not exist
-        ORACLE_DRIVER="$SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/ojdbc6-11.2.0.3.0.jar"
+        ORACLE_DRIVER="$SONAR_NEXT/extensions/jdbc-driver/oracle/ojdbc6-11.2.0.3.0.jar"
         if [ ! -f "$ORACLE_DRIVER" ]
         then
           echo "Copying ORACLE driver"
-          cp $SOFTWARE_FOLDER/SonarQube/ojdbc6-11.2.0.3.0.jar $SONAR_TESTS/sonar-current/extensions/jdbc-driver/oracle/
+          cp $SOFTWARE_FOLDER/SonarQube/ojdbc6-11.2.0.3.0.jar $SONAR_NEXT/extensions/jdbc-driver/oracle/
         fi
 
         echo "sonar.jdbc.url=$O_JDBC_URL" >> $SONAR_PROPERTIES_FILE
@@ -43,4 +43,4 @@ then
   fi
 fi
 
-$SONAR_TESTS/sonar-current/bin/$SONAR_WRAPPER_FOLDER/sonar.sh $1
+$SONAR_NEXT/bin/$SONAR_WRAPPER_FOLDER/sonar.sh $1

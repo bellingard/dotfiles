@@ -10,9 +10,10 @@ export PATH=$DOTFILES/sonarqube/bin:$PATH
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
 
-export SONAR_TESTS=$SOFTWARE_FOLDER/SonarQube/NEXT_VERSION
-alias s-dev-folder="cd $SONAR_TESTS/sonar-current"
-export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
+export SONAR_NEXT_FILES=$SOFTWARE_FOLDER/SonarQube/NEXT_VERSION_FILES
+export SONAR_NEXT=$SOFTWARE_FOLDER/SonarQube/sonarqube-next
+export PLUGINS_DEV=$SONAR_NEXT/extensions/plugins
+alias s-next="cd $SONAR_NEXT"
 
 # Add env URLs for SQ
 export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
