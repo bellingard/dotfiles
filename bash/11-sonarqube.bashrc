@@ -35,7 +35,7 @@ export SONAR_RUNNER_OPTS='-server'
 # Add tools to the PATH
 export PATH=$GROOVY_HOME/bin:$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
 # Add dotfiles folders
-export PATH=$DOTFILES/bin-sonarqube-tests:$PATH
+export PATH=$DOTFILES/sonarqube:$PATH
 
 # Add env URLs for SQ
 export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
