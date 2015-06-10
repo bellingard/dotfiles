@@ -10,15 +10,9 @@ export PATH=$DOTFILES/sonarqube/bin:$PATH
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
 
-
-export SONAR_TESTS=$SOFTWARE_FOLDER/SonarQube/DEV_VERSION
+export SONAR_TESTS=$SOFTWARE_FOLDER/SonarQube/NEXT_VERSION
+alias s-dev-folder="cd $SONAR_TESTS/sonar-current"
 export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
-
-
-
-
-
-
 
 # Add env URLs for SQ
 export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
@@ -41,11 +35,11 @@ export NO_SONARQUBE=1
 # ================================
 # Aliases specific to GitHub repositories and associated tests
 # ================================
-alias repos="cd $REPOS"
+
 alias examples="cd $REPOS/sonar-examples"
 alias java-projects="cd $TESTS/Java/projects"
 alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
-alias sonar-dev-folder="cd $SONAR_TESTS/sonar-current"
+
 
 # ================================
 # Aliases to our test VMs
