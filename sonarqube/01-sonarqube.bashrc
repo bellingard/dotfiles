@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Add bin folder to PATH
+export PATH=$DOTFILES/sonarqube/bin:$PATH
+
 # ================================
 # Settings specific to tests of SonarQube
 # ================================
@@ -9,16 +12,13 @@ export VMS_REPO=$HOME/VMs
 
 
 export SONAR_TESTS=$SOFTWARE_FOLDER/SonarQube/DEV_VERSION
-
-
 export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
 
 
 
 
 
-# Add dotfiles folders
-export PATH=$DOTFILES/sonarqube:$PATH
+
 
 # Add env URLs for SQ
 export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
