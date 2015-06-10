@@ -4,17 +4,18 @@
 export PATH=$DOTFILES/sonarqube/bin:$PATH
 
 # ================================
-# Settings specific to tests of SonarQube
+# Settings specific to test snapshot version of SonarQube
 # ================================
-
-export TESTS=$HOME/Tests
-export VMS_REPO=$HOME/VMs
 
 export SONAR_NEXT_FILES=$SOFTWARE_FOLDER/SonarQube/NEXT_VERSION_FILES
 export SONAR_NEXT=$SOFTWARE_FOLDER/SonarQube/sonarqube-next
 export PLUGINS_DEV=$SONAR_NEXT/extensions/plugins
 alias s-next="cd $SONAR_NEXT"
 
+
+# ================================
+# Env variables used for the different DB
+# ================================
 # Add env URLs for SQ
 export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
 export M_JDBC_URL="jdbc:mysql://localhost:13306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
@@ -29,22 +30,14 @@ export OENV="-Dsonar.jdbc.url=$O_JDBC_URL -Dsonar.jdbc.driverClassName=oracle.jd
 export HENV="-Dsonar.jdbc.url=$H_JDBC_URL -Dsonar.jdbc.driverClassName=org.h2.Driver -Dsonar.host.url=http://localhost:9000"
 export MSENV="-Dsonar.jdbc.url=$MS_JDBC_URL -Dsonar.jdbc.driverClassName=net.sourceforge.jtds.jdbc.Driver -Dsonar.host.url=http://localhost:9000"
 
+
+# ================================
+# Env variables & Aliases to our test with our VMs
+# ================================
+export VMS_REPO=$HOME/VMs
 # For Dory VM
 export NO_SONARQUBE=1
 
-
-# ================================
-# Aliases specific to GitHub repositories and associated tests
-# ================================
-
-alias examples="cd $REPOS/sonar-examples"
-alias java-projects="cd $TESTS/Java/projects"
-alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
-
-
-# ================================
-# Aliases to our test VMs
-# ================================
 alias dory-vm="cd $VMS_REPO/instances/dory-latest"
 alias nemo-vm="cd $VMS_REPO/instances/nemodb-latest"
 alias mysql-vm="cd $VMS_REPO/instances/mysql-5.6"
@@ -55,3 +48,11 @@ alias ie9-vm="cd $VMS_REPO/instances/ie9-win7"
 alias ie10-vm="cd $VMS_REPO/instances/ie10-win7"
 alias ie11-vm="cd $VMS_REPO/instances/ie11-win7"
 
+
+# ================================
+# Aliases specific to GitHub repositories and associated tests
+# ================================
+export TESTS=$HOME/Tests
+
+alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
+alias multi-language-project="cd $TESTS/Multi-language/multi-language-test"
