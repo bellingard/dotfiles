@@ -9,6 +9,8 @@ echo "Distribution unzipped"
 
 rm $SONAR_NEXT
 ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$sonarVersion-SNAPSHOT $SONAR_NEXT
+rm $SONAR_CURRENT
+ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$sonarVersion-SNAPSHOT $SONAR_CURRENT
 
 # Configure Dev UPC
 echo "\n\nsonar.updatecenter.url=http://update.sonarsource.org/update-center-dev.properties" >> $SONAR_NEXT/conf/sonar.properties

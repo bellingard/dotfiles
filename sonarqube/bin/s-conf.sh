@@ -1,2 +1,2 @@
 #!/bin/sh
-open $SONAR_NEXT/conf/sonar.properties
+open $SONAR_CURRENT/conf/sonar.properties

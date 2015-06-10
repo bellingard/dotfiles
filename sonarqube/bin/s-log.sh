@@ -1,2 +1,2 @@
 #!/bin/sh
-tail -f $SONAR_NEXT/logs/sonar.log
+tail -f $SONAR_CURRENT/logs/sonar.log
