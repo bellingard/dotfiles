@@ -7,33 +7,17 @@
 
 export TESTS=$HOME/Tests
 export VMS_REPO=$HOME/VMs
-export TESTS_BACKUP=$TESTS/BACKUP
+
 
 export SONAR_TESTS=$SOFTWARE_FOLDER/Sonar/DEV_VERSION
 export SONAR_TESTS_BACKUP=$SONAR_TESTS/BACKUP
 
 export PLUGINS_DEV=$SONAR_TESTS/sonar-current/extensions/plugins
-export PLUGINS_PROD=$SOFTWARE_FOLDER/Sonar/current/extensions/plugins
 
-export MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
-export M2_HOME=$SOFTWARE_FOLDER/Maven/current
-export MAVEN_LOCAL_REPOSITORY=$HOME/.m2/repository
-export MAVEN_HOME=M2_HOME
-export ANT_HOME=$SOFTWARE_FOLDER/Ant/current
-export SONAR_RUNNER_HOME=$SOFTWARE_FOLDER/SonarRunner/current
-export GRADLE_HOME=$SOFTWARE_FOLDER/Gradle/current
-export GRADLE_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
-export ANDROID_HOME=$SOFTWARE_FOLDER/Android/current/sdk
-export V8_HOME=$SOFTWARE_FOLDER/V8/current
-export SUBVERSION_BIN=/opt/subversion/bin
-export GROOVY_HOME=$SOFTWARE_FOLDER/Groovy/current
 
-export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
-export MAVEN_OPTS='-server'
-export SONAR_RUNNER_OPTS='-server'
 
-# Add tools to the PATH
-export PATH=$GROOVY_HOME/bin:$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION_BIN:$PATH
+
+
 # Add dotfiles folders
 export PATH=$DOTFILES/sonarqube:$PATH
 
