@@ -60,4 +60,5 @@ alias ie11-vm="cd $VMS_REPO/instances/ie11-win7"
 export TESTS=$HOME/Tests
 
 alias fake-project="cd $TESTS/Java/projects/fake-project-for-tests"
+alias multi-module-project="cd $TESTS/Java/projects/multi-module-project"
 alias multi-language-project="cd $TESTS/Multi-language/multi-language-test"
