@@ -13,3 +13,6 @@ setLicense "views"
 setLicense "sqale"
 setLicense "devcockpit"
 setLicense "report"
+
+# some language plugins too
+setLicense "cpp"
