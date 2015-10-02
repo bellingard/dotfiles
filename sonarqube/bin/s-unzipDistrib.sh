@@ -12,6 +12,10 @@ ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$sonarVersion-SNAPSHOT $SONAR_NEXT
 rm $SONAR_CURRENT
 ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$sonarVersion-SNAPSHOT $SONAR_CURRENT
 
+# Add DB credentials because they're no more set by default
+echo "\n\nsonar.jdbc.username=sonar" >> $SONAR_NEXT/conf/sonar.properties
+echo "\nsonar.jdbc.password=sonar" >> $SONAR_NEXT/conf/sonar.properties
+
 # Configure Dev UPC
 echo "\n\nsonar.updatecenter.url=http://update.sonarsource.org/update-center-dev.properties" >> $SONAR_NEXT/conf/sonar.properties
 # Enable E/S HTTP port
