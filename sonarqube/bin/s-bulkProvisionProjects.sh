@@ -3,7 +3,8 @@ while [ $x -le 150 ]
 do
   
   echo "User $x"
-  curl -X POST -u admin:admin -d key=project$x -d name=project$x http://localhost:9000/api/projects/create
+  random_name=$(curl http://randomword.setgetgo.com/get.php | tr -d '[[:space:]]')
+  curl -u admin:admin -X POST "http://localhost:9000/api/projects/create?key=$random_name$x&name=$random_name"
   echo " "
 
   x=$(( $x + 1 ))
