@@ -17,6 +17,7 @@ target/
 
 ### Gradle
 #.gradle/
+build/
 
 ### Subversion
 #.svn/
