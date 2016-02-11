@@ -22,9 +22,9 @@ alias s-next="cd $SONAR_NEXT"
 # Env variables used for the different DB
 # ================================
 # Add env URLs for SQ
-export P_JDBC_URL="jdbc:postgresql://localhost:15432/sonar"
-export M_JDBC_URL="jdbc:mysql://localhost:13306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
-export O_JDBC_URL="jdbc:oracle:thin:@localhost:11521/ORCL"
+export P_JDBC_URL="jdbc:postgresql://localhost:5432/sonar"
+export M_JDBC_URL="jdbc:mysql://localhost:3306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
+export O_JDBC_URL="jdbc:oracle:thin:@localhost:1521/ORCL"
 export H_JDBC_URL="jdbc:h2:tcp://localhost:9092/sonar"
 export MS_JDBC_URL="jdbc:jtds:sqlserver://localhost/sonar;SelectMethod=Cursor"
 
