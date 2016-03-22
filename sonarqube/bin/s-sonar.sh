@@ -3,6 +3,11 @@
 # Exit on failure
 set -e
 
+setDefaultCredentials() {
+    echo "sonar.jdbc.username=sonar" >> $SONAR_PROPERTIES_FILE
+    echo "sonar.jdbc.password=sonar" >> $SONAR_PROPERTIES_FILE  
+}
+
 SONAR_PROPERTIES_FILE=$SONAR_CURRENT/conf/sonar.properties
 SONAR_DB="localhost"
 
@@ -15,10 +20,12 @@ then
   if [ "$2" = "P" ] 
   then
     echo "sonar.jdbc.url=$P_JDBC_URL" >> $SONAR_PROPERTIES_FILE
+    setDefaultCredentials
   else
     if [ "$2" = "M" ] 
     then
       echo "sonar.jdbc.url=$M_JDBC_URL" >> $SONAR_PROPERTIES_FILE
+    setDefaultCredentials
     else
       if [ "$2" = "O" ] 
       then
@@ -31,10 +38,12 @@ then
         fi
 
         echo "sonar.jdbc.url=$O_JDBC_URL" >> $SONAR_PROPERTIES_FILE
+        setDefaultCredentials
       else
         if [ "$2" = "MS" ] 
         then
           echo "sonar.jdbc.url=$MS_JDBC_URL" >> $SONAR_PROPERTIES_FILE
+          setDefaultCredentials
         else
           echo "sonar.jdbc.url=$H_JDBC_URL" >> $SONAR_PROPERTIES_FILE
         fi
