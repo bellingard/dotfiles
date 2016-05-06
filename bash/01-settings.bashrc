@@ -48,6 +48,8 @@ export ANT_HOME=$SOFTWARE_FOLDER/Ant/current
 # SonarQube Runner
 export SONAR_RUNNER_HOME=$SOFTWARE_FOLDER/SonarRunner/current
 export SONAR_RUNNER_OPTS='-server'
+export SONAR_SCANNER_HOME=$SOFTWARE_FOLDER/SonarRunner/current
+export SONAR_SCANNER_OPTS='-server'
 # Gradle
 export GRADLE_HOME=$SOFTWARE_FOLDER/Gradle/current
 export GRADLE_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
