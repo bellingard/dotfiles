@@ -46,6 +46,7 @@ then
           setDefaultCredentials
         else
           echo "sonar.jdbc.url=$H_JDBC_URL" >> $SONAR_PROPERTIES_FILE
+          echo "sonar.embeddedDatabase.port=9092" >> $SONAR_PROPERTIES_FILE
         fi
       fi
     fi
