@@ -14,4 +14,4 @@ export GIT_PROMPT_PATH=/usr/local/git/contrib/completion/git-prompt.sh
 
 # JAVA_HOME folder
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
