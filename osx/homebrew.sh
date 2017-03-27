@@ -36,4 +36,6 @@ install gawk
 install git
 install subversion
 
+install node
+
 install v8
