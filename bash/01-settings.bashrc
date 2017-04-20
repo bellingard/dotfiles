@@ -61,4 +61,4 @@ export GROOVY_HOME=$SOFTWARE_FOLDER/Groovy/current
 export SUBVERSION=/opt/subversion
 
 # Add all the tools to the PATH
-export PATH=$GROOVY_HOME/bin:$ANT_HOME/bin:$M2_HOME/bin:$SONAR_RUNNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION/bin:$PATH
+export PATH=$GROOVY_HOME/bin:$ANT_HOME/bin:$M2_HOME/bin:$SONAR_SCANNER_HOME/bin:$GRADLE_HOME/bin:$V8_HOME:$SUBVERSION/bin:$PATH
