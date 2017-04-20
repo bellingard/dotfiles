@@ -14,13 +14,18 @@ clearEmbeddedDatabaseSettings() {
   rm $SONAR_PROPERTIES_FILE.new
 }
 
+clearDataFolder() {
+  rm -rf $SONAR_CURRENT/data/*
+  rm -rf $SONAR_CURRENT/logs/*
+}
+
 SONAR_PROPERTIES_FILE=$SONAR_CURRENT/conf/sonar.properties
 SONAR_DB="localhost"
 
 if [ "$1" = "start" ]
 then
   # clean the temp data
-  s-clearDataFolder.sh
+  clearDataFolder
 
   # Clear DB settings
   clearEmbeddedDatabaseSettings
