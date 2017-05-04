@@ -5,7 +5,7 @@ set -e
 
 echo "Install latest stable build of SonarQube"
 
-LATEST=$(curl --silent "http://burgr.internal.sonarsource.com/api/commitPipelinesStages?project=SonarSource/sonarqube&branch=master&nbOfCommits=50" | jq '[.[].pipelines[] | select(.stages[].type == "promotion")] | .[0]')
+LATEST=$(curl --silent "https://$BURGRX_USER:$BURGRX_PASS@burgrx.sonarsource.com/api/commitPipelinesStages?project=SonarSource/sonarqube&branch=master&nbOfCommits=50" | jq '[.[].pipelines[] | select(.stages[].type == "promotion")] | .[0]')
 if [ "$LATEST" = "null" ]
 then
 		echo "No latest stable build."
