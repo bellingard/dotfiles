@@ -63,7 +63,7 @@ echo ""
 
 # Restore backup plugins
 echo "================================================="
-cp $SONAR_NEXT_FILES/BACKUP/*.jar $SONAR_NEXT/extensions/plugins/
+cp $SONAR_NEXT_FILES/BACKUP/*.jar $SONAR_NEXT/extensions/plugins/ 2>/dev/null || :
 echo ""
 
 # Checks if plugins must be installed or not
