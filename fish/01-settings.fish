@@ -1,6 +1,13 @@
 #!/usr/local/bin/fish
 
 # ================================
+# General aliases
+# ================================
+alias ll="ls -al"
+alias grep='grep --colour=auto'
+alias h="history"
+
+# ================================
 # General settings
 # ================================
 
