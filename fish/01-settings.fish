@@ -31,7 +31,7 @@ set -x SOFTWARE_FOLDER $HOME/Software
 set -x JAVA_TOOL_OPTIONS '-Djava.awt.headless=true'
 # Maven
 set -x M2_HOME $SOFTWARE_FOLDER/Maven/current
-set -x MAVEN_OPTS "-Xmx1024M -XX MaxPermSize=256M -server"
+set -x MAVEN_OPTS "-Xmx1024M -XX:MaxPermSize=256M -server"
 set -x MAVEN_LOCAL_REPOSITORY $HOME/.m2/repository
 set -x MAVEN_HOME M2_HOME
 # Ant
@@ -43,7 +43,7 @@ set -x SONAR_SCANNER_HOME $SOFTWARE_FOLDER/SonarRunner/current
 set -x SONAR_SCANNER_OPTS '-server'
 # Gradle
 set -x GRADLE_HOME $SOFTWARE_FOLDER/Gradle/current
-set -x GRADLE_OPTS "-Xmx1024M -XX MaxPermSize=256M"
+set -x GRADLE_OPTS "-Xmx1024M -XX:MaxPermSize=256M"
 # Android
 set -x ANDROID_HOME $SOFTWARE_FOLDER/Android/current/sdk
 # Groovy
