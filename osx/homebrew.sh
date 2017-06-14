@@ -29,12 +29,14 @@ install coreutils
 install bash
 install bash-completion
 
+mkdir ~/.config/fish
+install fish
+
 install colordiff
 install dwdiff
 install gawk
 
 install git
-install subversion
 
 install node
 

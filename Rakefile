@@ -36,6 +36,13 @@ task :install do
     end
     run %{ ln -s "#{source}" "#{target}" }
   end
+
+  # specific to fish
+  source = "#{ENV["PWD"]}/fish/config.fish.symlink"
+  target = "#{ENV["HOME"]}/.config/fish/config.fish"
+  run %{ rm "#{target}" }
+  run %{ ln -s "#{source}" "#{target}" }
+
 end
 
 desc "Uninstall our dotfiles."
