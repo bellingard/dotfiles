@@ -17,15 +17,22 @@ then
 	URL=$(echo $LATEST | jq -r '.versionUrl')
 else
 	echo "Install build of SonarQube $1"
-	BUILD=$(curl --silent "https://$BURGRX_USER:$BURGRX_PASS@burgrx.sonarsource.com/api/commitPipelinesStages?project=SonarSource/sonarqube&branch=master&nbOfCommits=50" | jq --arg VERSION "$1" '[.[].pipelines[] | select(.stages[].type == "promotion") | select(.version == $VERSION)] | .[0]')
-	if [ "$BUILD" = "null" ]
-	then
-			echo "No stable build for version $1."
-			exit 1
-	fi
-
 	VERSION=$1
-	URL=$(echo $BUILD | jq -r '.versionUrl')
+	URL="https://repox.sonarsource.com/sonarsource/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+
+	HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
+	if [ ! "$HTTP_CODE" = "200" ]
+	then
+		# Maybe it's just a dev version
+		URL="https://repox.sonarsource.com/sonarsource-dev/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+
+		HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
+		if [ ! "$HTTP_CODE" = "200" ]
+		then
+			echo "Can't find ZIP file for build $VERSION"
+			exit 1
+		fi
+	fi
 fi
 
 echo "Downloading SonarQube $VERSION"

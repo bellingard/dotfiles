@@ -1,5 +1,5 @@
 ### Each directory and file, which starts with dot
-.*
+#.*
 
 ### IntelliJ Idea
 #.idea/
