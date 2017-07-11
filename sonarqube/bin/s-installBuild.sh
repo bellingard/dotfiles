@@ -24,7 +24,7 @@ else
 	if [ ! "$HTTP_CODE" = "200" ]
 	then
 		# Maybe it's just a dev version
-		URL="https://repox.sonarsource.com/sonarsource-dev/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+		URL="https://$REPOX_USER:$REPOX_PASS@repox.sonarsource.com/sonarsource-dev/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
 
 		HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
 		if [ ! "$HTTP_CODE" = "200" ]
