@@ -40,7 +40,7 @@ export SOFTWARE_FOLDER=$HOME/Software
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 # Maven
 export M2_HOME=$SOFTWARE_FOLDER/Maven/current
-export MAVEN_OPTS="-Xmx1024M -XX:MaxPermSize=256M -server"
+export MAVEN_OPTS="-Xmx1024M -server"
 export MAVEN_LOCAL_REPOSITORY=$HOME/.m2/repository
 export MAVEN_HOME=M2_HOME
 # Ant
@@ -52,7 +52,7 @@ export SONAR_SCANNER_HOME=$SOFTWARE_FOLDER/SonarRunner/current
 export SONAR_SCANNER_OPTS='-server'
 # Gradle
 export GRADLE_HOME=$SOFTWARE_FOLDER/Gradle/current
-export GRADLE_OPTS="-Xmx1024M -XX:MaxPermSize=256M"
+export GRADLE_OPTS="-Xmx1024M"
 # Android
 export ANDROID_HOME=$SOFTWARE_FOLDER/Android/current/sdk
 # Groovy
