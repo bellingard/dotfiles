@@ -24,11 +24,11 @@ end
 # Env variables used for the different DB
 # ================================
 # Add env URLs for SQ
-set -x P_JDBC_URL "jdbc:postgresql://localhost:5432/sonar"
-set -x M_JDBC_URL "jdbc:mysql://localhost:3306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
+set -x P_JDBC_URL "jdbc:postgresql://localhost:5432/sonarqube"
+set -x M_JDBC_URL "jdbc:mysql://localhost:3306/sonarqube?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useConfigs=maxPerformance"
 set -x O_JDBC_URL "jdbc:oracle:thin:@localhost:1521/ORCL"
 set -x H_JDBC_URL "jdbc:h2:tcp://localhost:9092/sonar"
-set -x MS_JDBC_URL "jdbc:jtds:sqlserver://localhost/sonar;SelectMethod=Cursor"
+set -x MS_JDBC_URL "jdbc:jtds:sqlserver://localhost/sonarqube;SelectMethod=Cursor"
 
 # Add env URLs for SQ
 set -x PENV "-Dsonar.jdbc.url=$P_JDBC_URL -Dsonar.jdbc.driverClassName=org.postgresql.Driver -Dsonar.host.url=http://localhost:9000"

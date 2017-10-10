@@ -4,8 +4,8 @@
 set -e
 
 setDefaultCredentials() {
-    echo "sonar.jdbc.username=sonar" >> $SONAR_PROPERTIES_FILE
-    echo "sonar.jdbc.password=sonar" >> $SONAR_PROPERTIES_FILE
+    echo "sonar.jdbc.username=sonarqube" >> $SONAR_PROPERTIES_FILE
+    echo "sonar.jdbc.password=sonarqube" >> $SONAR_PROPERTIES_FILE
 }
 
 clearEmbeddedDatabaseSettings() {
@@ -21,6 +21,9 @@ clearDataFolder() {
 
 SONAR_PROPERTIES_FILE=$SONAR_CURRENT/conf/sonar.properties
 SONAR_DB="localhost"
+
+# Always set fake URL for telemetry to be sure to not pollute Chestnut
+echo "sonar.telemetry.url=http://xavier.gva.sonarsource.com:9876/sonarqube" >> $SONAR_PROPERTIES_FILE
 
 if [ "$1" = "start" ]
 then
