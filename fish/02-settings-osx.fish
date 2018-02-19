@@ -14,6 +14,6 @@ case Darwin
     set -x HOMEBREW_CASK_OPTS "--caskroom=/opt/homebrew-cask/Caskroom"
 
     # JAVA_HOME folder
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 
 end
