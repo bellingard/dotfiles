@@ -1,5 +1,7 @@
 # Custom exclusions
 
+.DS_Store
+
 ### Subversion
 .svn/
 
