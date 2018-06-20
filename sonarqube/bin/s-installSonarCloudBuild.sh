@@ -51,6 +51,9 @@ ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$VERSION $SONAR_CURRENT
 echo "Clean up temp file"
 rm $SOFTWARE_FOLDER/SonarQube/_TEMP_/sonarcloud-$VERSION.zip
 
+echo "Install plugins"
+cp $SOFTWARE_FOLDER/SonarQube/_SC-PLUGINS_/* $SONAR_NEXT/extensions/plugins/
+
 # Set fake Muppet settings
 echo "muppet.secret.token=fake" >> $SONAR_NEXT/conf/sonar.properties
 # Set fake URL for telemetry to be sure to not pollute Chestnut
