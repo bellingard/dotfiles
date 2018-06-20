@@ -22,9 +22,6 @@ clearDataFolder() {
 SONAR_PROPERTIES_FILE=$SONAR_CURRENT/conf/sonar.properties
 SONAR_DB="localhost"
 
-# Always set fake URL for telemetry to be sure to not pollute Chestnut
-echo "sonar.telemetry.url=http://xavier.gva.sonarsource.com:9876/sonarqube" >> $SONAR_PROPERTIES_FILE
-
 if [ "$1" = "start" ]
 then
   # clean the temp data

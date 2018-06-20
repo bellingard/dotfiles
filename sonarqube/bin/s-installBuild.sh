@@ -51,6 +51,9 @@ ln -s $SONAR_NEXT_FILES/INSTALL/sonarqube-$VERSION $SONAR_CURRENT
 echo "Clean up temp file"
 rm $SOFTWARE_FOLDER/SonarQube/_TEMP_/sonarqube-$VERSION.zip
 
+# Set fake URL for telemetry to be sure to not pollute Chestnut
+echo "sonar.telemetry.url=http://xavier.gva.sonarsource.com:9876/sonarqube" >> $SONAR_NEXT/conf/sonar.properties
+
 # And start SonarQube
 echo "================================================="
 s-sonar.sh start
