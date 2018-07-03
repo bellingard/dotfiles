@@ -5,3 +5,4 @@ export BURGRX_USER=
 export BURGRX_PASS=
 export REPOX_USER=
 export REPOX_PASS=
+export SC_TOKEN=
