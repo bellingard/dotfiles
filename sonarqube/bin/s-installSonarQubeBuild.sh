@@ -56,7 +56,7 @@ echo "sonar.telemetry.url=http://xavier.gva.sonarsource.com:9876/sonarqube" >> $
 
 # And start SonarQube
 echo "================================================="
-s-sonar.sh start
+sq.sh start
 echo ""
 
 if [[ "$OSTYPE" =~ ^darwin ]]
