@@ -62,6 +62,7 @@ cp $SOFTWARE_FOLDER/SonarQube/_SC-PLUGINS_/* $SONAR_NEXT/extensions/plugins/
 SONAR_PROPERTIES_FILE=$SONAR_NEXT/conf/sonar.properties
 # Set fake Muppet settings
 echo "muppet.secret.token=fake" >> $SONAR_PROPERTIES_FILE
+echo "sonar.muppet.url=http://localhost:8888" >> $SONAR_PROPERTIES_FILE
 # Set fake URL for telemetry to be sure to not pollute Chestnut
 echo "sonar.telemetry.url=http://xavier.gva.sonarsource.com:9876/sonarqube" >> $SONAR_PROPERTIES_FILE
 # Set default DB credentials
