@@ -16,21 +16,36 @@ then
 	VERSION=$(echo $LATEST | jq -r '.version')
 	URL=$(echo $LATEST | jq -r '.versionUrl')
 else
-	echo "Install build of SonarQube $1"
+	echo "Install build of SonarQube $1 $2"
 	VERSION=$1
-	URL="https://repox.sonarsource.com/sonarsource/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
 
-	HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
-	if [ ! "$HTTP_CODE" = "200" ]
+	if [[ "$2" = "dev" ]]
 	then
-		# Maybe it's just a dev version
-		URL="https://$REPOX_USER:$REPOX_PASS@repox.sonarsource.com/sonarsource-dev/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+		# Developer Edition
+		URL="https://$REPOX_USER:$REPOX_PASS@repox.sonarsource.com/sonarsource/com/sonarsource/sonarqube/sonarqube-developer/$VERSION/sonarqube-developer-$VERSION.zip"
 
 		HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
 		if [ ! "$HTTP_CODE" = "200" ]
 		then
 			echo "Can't find ZIP file for build $VERSION"
 			exit 1
+		fi
+	else
+		# Community Edition by default
+		URL="https://repox.sonarsource.com/sonarsource/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+
+		HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
+		if [ ! "$HTTP_CODE" = "200" ]
+		then
+			# Maybe it's just a dev version
+			URL="https://$REPOX_USER:$REPOX_PASS@repox.sonarsource.com/sonarsource-dev/org/sonarsource/sonarqube/sonar-application/$VERSION/sonar-application-$VERSION.zip"
+
+			HTTP_CODE=$(curl --write-out '%{http_code}' --silent --output /dev/null --head "$URL")
+			if [ ! "$HTTP_CODE" = "200" ]
+			then
+				echo "Can't find ZIP file for build $VERSION"
+				exit 1
+			fi
 		fi
 	fi
 fi
