@@ -21,3 +21,6 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 export PATH=$NVM_DIR:$PATH
+
+# AWS CLI tools installed with PIP (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+export PATH=$HOME/Library/Python/2.7/bin/:$PATH
