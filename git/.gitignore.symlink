@@ -13,6 +13,9 @@ Desktop.ini
 .sonar
 .scannerwork
 
+### SonarLint
+.sonarlint
+
 # Created by https://www.gitignore.io/api/java,node,maven,gradle,eclipse,intellij
 
 ### Eclipse ###
