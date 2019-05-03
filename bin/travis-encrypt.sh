@@ -4,4 +4,4 @@
 
 # travis-encrypt.sh toto -r bellingard/sonar-scanner-npm
 
-docker run --rm --label=travis-cli smartcanvas/travis-cli travis encrypt $*
+docker run --rm smartcanvas/travis-cli encrypt $*
