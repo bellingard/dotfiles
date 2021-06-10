@@ -11,7 +11,7 @@ case Darwin
     end
 
     # JAVA_HOME folder
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-11.0.1.jdk/Contents/Home
+    set -x JAVA_HOME /usr/local/Cellar/openjdk/16.0.1/
 
     # AWS CLI tools installed with PIP (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
     set -x PATH $HOME/Library/Python/2.7/bin/ $PATH

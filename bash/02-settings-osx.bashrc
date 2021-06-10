@@ -13,7 +13,7 @@ export GIT_COMPLETION_PATH=/usr/local/git/contrib/completion/git-completion.bash
 export GIT_PROMPT_PATH=/usr/local/git/contrib/completion/git-prompt.sh
 
 # JAVA_HOME folder
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export JAVA_HOME=/usr/local/Cellar/openjdk/16.0.1/
 
 # NVM installed with Homebrew
 export NVM_DIR="$HOME/.nvm"
