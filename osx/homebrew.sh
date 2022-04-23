@@ -1,43 +1,64 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-command -v brew >/dev/null 2>&1
-if [ "$?" -ne "0" ]; then
-    echo "You should probably install Homebrew first:"
-    echo "  - https://github.com/mxcl/homebrew/wiki/installation"
-    echo "  - or run the command taht can be found in $DOTFILES/osx/homebrew.sh"
-    # and HERE is the command:
-    # ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-    exit
-fi
+# Install command-line tools using Homebrew -> https://brew.sh
 
-brew doctor
+# Make sure we’re using the latest Homebrew.
 brew update
+
+# Upgrade any already-installed formulae.
 brew upgrade
+
+
+###############################################################################
+# Installing Utilities                                                        #
+###############################################################################
+
+# Install GNU core utilities (those that come with macOS are outdated).
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+brew install coreutils
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+
+
+###############################################################################
+# Installing soft for dev                                                     #
+###############################################################################
+
+brew install git # need config
+brew install maven
+brew install node
+brew install yarn
+
+
+###############################################################################
+# Installing apps                                                             #
+###############################################################################
+
+brew install --cask iterm2
+brew install --cask bitwarden
+brew install --cask rectangle
+brew install --cask firefox
+brew install --cask opera
+brew install --cask chromium
+brew install --cask zoom
+brew install --cask dropbox
+brew install --cask slack
+brew install --cask appcleaner
+brew install --cask omnidisksweeper
+brew install --cask disk-inventory-x
+brew install --cask betterzip
+brew install --cask vlc
+brew install --cask skype
+brew install --cask skitch
+brew install --cask sublime-text
+brew install --cask gimp
+brew install --cask libreoffice
+brew install --cask cyberduck
+brew install --cask spotify
+brew install --cask vscodium
+brew install --cask 1password
+
+# Remove outdated versions from the cellar.
 brew cleanup
-
-function install {
-  brew ls $1 >/dev/null 2>&1
-  if [ "$?" -ne "0" ]; then
-    brew install "$@"
-  else
-    echo "$1 already installed"
-  fi
-}
-
-install coreutils
-
-install bash
-install bash-completion
-
-mkdir ~/.config/fish
-install fish
-
-install colordiff
-install dwdiff
-install gawk
-
-install git
-
-install node
-
-install v8
