@@ -30,6 +30,7 @@ brew install git # need config
 brew install maven
 brew install node
 brew install yarn
+brew install python
 
 
 ###############################################################################
