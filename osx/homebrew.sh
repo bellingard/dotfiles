@@ -60,6 +60,7 @@ brew install --cask cyberduck
 brew install --cask spotify
 brew install --cask vscodium
 brew install --cask 1password
+brew install --cask kdrive
 
 # Remove outdated versions from the cellar.
 brew cleanup
