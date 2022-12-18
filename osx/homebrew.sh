@@ -31,6 +31,7 @@ brew install maven
 brew install node
 brew install yarn
 brew install python
+brew install openjdk
 
 
 ###############################################################################
