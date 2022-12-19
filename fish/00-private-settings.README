@@ -1,8 +1,0 @@
-# The following environment variables must be set for all the SonarQube scripts to work:
-GITHUB_TOKEN
-SONARSOURCE_PLUGIN_LICENSES_URL
-BURGRX_USER
-BURGRX_PASS
-REPOX_USER
-REPOX_PASS
-SC_TOKEN

@@ -6,9 +6,6 @@
   safecrlf = true
   editor = vim
 
-[commit]
-  template = ~/.git-commit-template
-
 [push]
   # 'git push' will push the current branch to its tracking branch
   # the usual default is to push all branches
@@ -58,11 +55,10 @@
 
 [user]
   name = Fabrice Bellingard
-  email = fabrice.bellingard@sonarsource.com
+  email = bellingard@gmail.com
 
 [github]
   user = bellingard
-  token = $GITHUB_TOKEN
 
 # commands will be autocorrect (rset -> reset)
 [help]
