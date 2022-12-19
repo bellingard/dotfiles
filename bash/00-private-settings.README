@@ -1,8 +1,0 @@
-# The following environment variables must be set in a bashrc file for all the SonarQube scripts to work:
-export GITHUB_TOKEN=
-export SONARSOURCE_PLUGIN_LICENSES_URL=
-export BURGRX_USER=
-export BURGRX_PASS=
-export REPOX_USER=
-export REPOX_PASS=
-export SC_TOKEN=

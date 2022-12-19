@@ -1,0 +1,63 @@
+# Taps
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
+tap 'homebrew/bundle'
+
+###############################################################################
+# Installing Utilities                                                        #
+###############################################################################
+brew 'coreutils'
+brew 'moreutils'
+brew 'findutils'
+
+
+###############################################################################
+# Installing soft for dev                                                     #
+###############################################################################
+
+brew 'git'
+brew 'maven'
+brew 'node'
+brew 'yarn'
+brew 'python'
+brew 'openjdk'
+
+
+###############################################################################
+# Installing apps                                                             #
+###############################################################################
+
+cask 'iterm2'
+cask 'bitwarden'
+cask 'rectangle'
+cask 'firefox'
+cask 'opera'
+cask 'chromium'
+cask 'zoom'
+cask 'slack'
+cask 'appcleaner'
+cask 'omnidisksweeper'
+cask 'disk-inventory-x'
+cask 'betterzip'
+cask 'vlc'
+cask 'skype'
+cask 'skitch'
+cask 'sublime-text'
+cask 'gimp'
+cask 'libreoffice'
+cask 'cyberduck'
+cask 'spotify'
+cask 'vscodium'
+cask 'kdrive'
+
+###############################################################################
+# Installing fonts                                                             #
+###############################################################################
+cask 'font-lato'
+cask 'font-open-sans'
+cask 'font-roboto'
+cask 'font-source-code-pro-for-powerline'
+cask 'font-source-code-pro'
+cask 'font-source-sans-pro'
+cask 'font-source-serif-pro'

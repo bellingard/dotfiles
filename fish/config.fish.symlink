@@ -1,6 +1,0 @@
-set -x DOTFILES $HOME/Repos/dotfiles
-
-for config_file in $DOTFILES/**/*.fish
-    source $config_file
-end
-set -e config_file
