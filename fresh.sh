@@ -1,8 +1,12 @@
 #!/bin/sh
 
-# Before starting, the "dotfiles" repo must cloned in "$HOME/Repos"
-
 echo "Setting up your Mac..."
+
+# Before starting, the "dotfiles" repo must cloned in "$HOME/Repos"
+if [ ! -d $HOME/Repos/dotfiles ]; then 
+  echo "dotfiles repository not cloned!"
+  exit
+fi
 
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
@@ -36,4 +40,4 @@ brew bundle --file $HOME/Repos/dotfiles/brew/Brewfile
 brew cleanup
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source $HOME/Repos/dotfiles/osx/set-defaults.sh
+#source $HOME/Repos/dotfiles/osx/set-defaults.sh
