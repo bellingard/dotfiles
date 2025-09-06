@@ -50,6 +50,7 @@ cask 'cyberduck'
 cask 'spotify'
 cask 'vscodium'
 cask 'kdrive'
+cask 'mozilla-vpn'
 
 ###############################################################################
 # Installing fonts                                                             #
