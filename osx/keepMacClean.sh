@@ -9,15 +9,12 @@ brew upgrade
 # Keep only linked versions
 brew cleanup -s
 
-# Brew Cask cache cleanup for unfinished download
-brew cask cleanup
+# Brew cache cleanup for unfinished download
+brew cleanup
 
 # Brew: is there any problems left?
 brew doctor
 brew missing
-
-# Upgrade Atom packages
-apm upgrade -c false
 
 # Update all the npm global installed binaries, like grunt, lessc
 npm update -g
