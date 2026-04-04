@@ -51,6 +51,7 @@ cask 'spotify'
 cask 'vscodium'
 cask 'kdrive'
 cask 'mozilla-vpn'
+cask 'handy'
 
 ###############################################################################
 # Installing fonts                                                             #
