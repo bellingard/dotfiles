@@ -17,6 +17,7 @@ brew 'findutils'
 ###############################################################################
 
 brew 'git'
+brew 'git-lfs'
 brew 'maven'
 brew 'node'
 brew 'yarn'
